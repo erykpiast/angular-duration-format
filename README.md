@@ -47,7 +47,7 @@ Available formatting options:
 
 Each number will be zero-padded to two places if you double letters (ex. `hh`, `mm`). Milliseconds are exception - they are padded to four places and you have to pass four letters (`ssss`).
 
-You can use every separator you want, but be careful. Passing format `h hours, m minutes` will produce unexpected results `34 34ours, 17 17inutes`. To avoid that, wrap every separator containing reserved letters in quotaion marks, like that `h 'hours', m 'minutes'`. (remember about escape them in your code!). Now, the result should be nicely `34 hours, 17 minutes`.
+You can use every separator you want, but be careful. Passing format `h hours, m minutes` will produce unexpected results `34 34ours, 17 17inutes`. To avoid that, wrap every separator containing reserved letters in quotaion marks, like that `h 'hours', m 'minutes'`. (remember about escaping them in your code!). Now, the result should be nicely `34 hours, 17 minutes`.
 
 ## Additional notes ##
 Note, that you can ommit some unit "levels", but it can produce weird results. If in example above you change format to `hh:mm`, result will be `34:1056`, because 17 minutes and 36 seconds it is 1056 seconds.
