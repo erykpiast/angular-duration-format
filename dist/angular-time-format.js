@@ -146,8 +146,8 @@ angular
 // ### main.js >>
 
 angular
-	.module('angular-bootstrap-directives', [
-		'angular-bootstrap-directives.button'
+	.module('angular-time-format', [
+		'angular-time-format.filter'
 	]);
 
 
