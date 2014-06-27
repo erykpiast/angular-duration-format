@@ -20,7 +20,7 @@ In templates you can use
   </p>
 ```
 
-In controllers (or directives, services, everywhere)
+In controllers (or directives, services, anywhere)
 ```
   angular.module('myModule').controller('exampleCtrl', function($scope, $filter) {
     var timeFilter = $filter('time');
