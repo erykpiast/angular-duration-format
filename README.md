@@ -30,8 +30,21 @@ In controllers (or directives, services, everywhere)
   });
 ```
 
-The result should be the same for both cases:
+The result should be the same in both cases:
 ```
   Time passed: 34:17:36:789
   Preformatted: 34:17:36:789
 ```
+
+Available formatting options:
+ * (y)ear
+ * (d)ay
+ * (h)our
+ * (m)inute
+ * (s)econd
+ * `sss` for milliseconds
+
+Each number will be zero-padded to two places if you double letters (ex. `hh`, `mm`). Milliseconds are exception - they are padded to four places and you have to pass four letters (`ssss`).
+
+Note, that you can ommit some formats, but it can produce weird results. If in example above you change format to `hh:mm`, result will be `34:1056`, because 17 minutes and 36 seconds it is 1056 seconds.
+ 
