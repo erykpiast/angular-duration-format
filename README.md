@@ -31,7 +31,7 @@ In controllers (or directives, services, everywhere)
 ```
 
 The result should be the same for both cases:
-  
+```
   Time passed: 34:17:36:789
   Preformatted: 34:17:36:789
-  
+```
