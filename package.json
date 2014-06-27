@@ -1,0 +1,42 @@
+{
+  "name": "angular-time-format",
+  "version": "0.0.1",
+  "description": "AngularJS utils for formatting time",
+  "main": "gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erykpiast/angular-time-format.git"
+  },
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "directives"
+  ],
+  "author": "Eryk Napierała",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erykpiast/angular-time-format/issues"
+  },
+  "homepage": "https://github.com/erykpiast/angular-time-format",
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-contrib-clean": "~0.5",
+    "grunt-contrib-concat": "~0.4",
+    "grunt-contrib-jshint": "~0.10",
+    "grunt-contrib-uglify": "~0.5",
+    "grunt-contrib-watch": "~0.6",
+    "grunt-http-server": "0.0.5",
+    "grunt-karma": "~0.8",
+    "karma": "~0.12",
+    "karma-jasmine": "~0.1",
+    "karma-phantomjs-launcher": "~0.1",
+    "load-grunt-tasks": "~0.5",
+    "phantomjs": "~1.9"
+  }
+}

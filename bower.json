@@ -1,0 +1,31 @@
+{
+  "name": "angular-time-format",
+  "version": "0.0.1",
+  "homepage": "https://github.com/erykpiast/angular-time-format",
+  "authors": [
+    "Eryk Napierała <eryk.piast@gmail.com>"
+  ],
+  "description": "AngularJS filter for formatting time",
+  "main": "src/main.module.js",
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "directives"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2",
+    "bootstrap": "~3.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2",
+    "jquery": "~2.1"
+  }
+}
