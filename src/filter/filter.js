@@ -1,6 +1,6 @@
 angular
     .module('angular-duration-format.filter', [ ])
-    .filter('time', function() {
+    .filter('duration', function() {
 
         var DURATION_FORMATS_SPLIT = /((?:[^ydhms']+)|(?:'(?:[^']|'')*')|(?:y+|d+|h+|m+|s+))(.*)/;
         var DURATION_FORMATS = {
