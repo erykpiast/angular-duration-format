@@ -1,11 +1,11 @@
 // ### filter.js >>
 
 angular
-    .module('angular-time-format.filter', [ ])
-    .filter('time', function() {
+    .module('angular-duration-format.filter', [ ])
+    .filter('duration', function() {
 
-        var TIME_FORMATS_SPLIT = /((?:[^ydhms']+)|(?:'(?:[^']|'')*')|(?:y+|d+|h+|m+|s+))(.*)/;
-        var TIME_FORMATS = {
+        var DURATION_FORMATS_SPLIT = /((?:[^ydhms']+)|(?:'(?:[^']|'')*')|(?:y+|d+|h+|m+|s+))(.*)/;
+        var DURATION_FORMATS = {
             'y': { // years
                 // "longer" years are not supported
                 value: 365 * 24 * 60 * 60 * 1000
@@ -58,7 +58,7 @@ angular
             var format = string;
 
             while(format) {
-                var match = TIME_FORMATS_SPLIT.exec(format);
+                var match = DURATION_FORMATS_SPLIT.exec(format);
 
                 if (match) {
                     parts = parts.concat(match.slice(1));
@@ -75,14 +75,14 @@ angular
         }
 
 
-        function _formatTime(timestamp, format) {
+        function _formatDuration(timestamp, format) {
             var text = '';
             var values = { };
 
             format.filter(function(format) { // filter only value parts of format
-                return TIME_FORMATS.hasOwnProperty(format);
+                return DURATION_FORMATS.hasOwnProperty(format);
             }).map(function(format) { // get formats with values only
-                var config = TIME_FORMATS[format];
+                var config = DURATION_FORMATS[format];
 
                 if(config.hasOwnProperty('pad')) {
                     return config.value;
@@ -94,7 +94,7 @@ angular
             }).map(function(format) { // get format configurations with values
                 return angular.extend({
                     name: format,
-                }, TIME_FORMATS[format]);
+                }, DURATION_FORMATS[format]);
             }).sort(function(a, b) { // sort formats descending by value
                 return b.value - a.value;
             }).forEach(function(format) { // create values for format parts
@@ -104,7 +104,7 @@ angular
             });
 
             format.forEach(function(part) {
-                var format = TIME_FORMATS[part];
+                var format = DURATION_FORMATS[part];
 
                 if(format) {
                     var value = values[format.value];
@@ -130,7 +130,7 @@ angular
             if(isNaN(timestamp)) {
                 return value;
             } else {
-                return _formatTime(
+                return _formatDuration(
                         timestamp,
                         _parseFormat(format)
                     );
@@ -146,8 +146,8 @@ angular
 // ### main.js >>
 
 angular
-	.module('angular-time-format', [
-		'angular-time-format.filter'
+	.module('angular-duration-format', [
+		'angular-duration-format.filter'
 	]);
 
 
