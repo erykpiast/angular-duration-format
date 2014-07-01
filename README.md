@@ -1,21 +1,21 @@
-angular-time-format
+angular-duration-format
 ===================
 
-AngularJS filter for formatting time.
+AngularJS filter for formatting duration.
 
 ## Usage ##
-Add `angular-time-format` as your app dependency.
+Add `angular-duration-format` as your app dependency.
 
 ```
   angular.module('myModule', [
-    angular-time-format'
+    angular-duration-format'
   ]);
 ```
 
 In templates you can use
 ```
   <p>
-    Time passed: {{ passed | time:'hh:mm:ss:sss' }}<br/>
+    Time passed: {{ passed | duration:'hh:mm:ss:sss' }}<br/>
     Preformatted: {{ passedPre }}
   </p>
 ```
@@ -23,10 +23,10 @@ In templates you can use
 In controllers (or directives, services, anywhere)
 ```
   angular.module('myModule').controller('exampleCtrl', function($scope, $filter) {
-    var timeFilter = $filter('time');
+    var durationFilter = $filter('duration');
     
     $scope.passed = 123456789;
-    $scope.passedPre = timeFilter($scope.passed, 'hh:mm:ss:sss');
+    $scope.passedPre = durationFilter($scope.passed, 'hh:mm:ss:sss');
   });
 ```
 
@@ -50,5 +50,5 @@ Each number will be zero-padded to two places if you double letters (ex. `hh`, `
 You can use every separator you want, but be careful. Passing format `h hours, m minutes` will produce unexpected results `34 34ours, 17 17inutes`. To avoid that, wrap every separator containing reserved letters in quotaion marks, like that `h 'hours', m 'minutes'`. (remember about escaping them in your code!). Now, the result should be nicely formatted `34 hours, 17 minutes`.
 
 ## Additional notes ##
-Note, that you can ommit some unit "levels", but it can produce weird results. If in example above you change format to `hh:mm`, result will be `34:1056`, because 17 minutes and 36 seconds it is 1056 seconds.
+Note, that you can ommit some unit "levels", but it can produce weird results. If in example above you change format to `hh:ss`, result will be `34:1056`, because 17 minutes and 36 seconds it is 1056 seconds.
  
