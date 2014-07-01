@@ -1,5 +1,5 @@
 {
-  "name": "angular-time-format",
+  "name": "angular-duration-format",
   "version": "0.0.2",
   "description": "AngularJS utils for formatting time",
   "main": "gruntfile.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/erykpiast/angular-time-format.git"
+    "url": "https://github.com/erykpiast/angular-duration-format.git"
   },
   "keywords": [
     "angular",
@@ -21,9 +21,9 @@
   "author": "Eryk Napierała",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/erykpiast/angular-time-format/issues"
+    "url": "https://github.com/erykpiast/angular-duration-format/issues"
   },
-  "homepage": "https://github.com/erykpiast/angular-time-format",
+  "homepage": "https://github.com/erykpiast/angular-duration-format",
   "devDependencies": {
     "grunt": "~0.4",
     "grunt-contrib-clean": "~0.5",

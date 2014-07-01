@@ -1,21 +1,21 @@
-angular-time-format
+angular-duration-format
 ===================
 
-AngularJS filter for formatting time.
+AngularJS filter for formatting duration.
 
 ## Usage ##
-Add `angular-time-format` as your app dependency.
+Add `angular-duration-format` as your app dependency.
 
 ```
   angular.module('myModule', [
-    angular-time-format'
+    angular-duration-format'
   ]);
 ```
 
 In templates you can use
 ```
   <p>
-    Time passed: {{ passed | time:'hh:mm:ss:sss' }}<br/>
+    Time passed: {{ passed | duration:'hh:mm:ss:sss' }}<br/>
     Preformatted: {{ passedPre }}
   </p>
 ```
@@ -23,10 +23,10 @@ In templates you can use
 In controllers (or directives, services, anywhere)
 ```
   angular.module('myModule').controller('exampleCtrl', function($scope, $filter) {
-    var timeFilter = $filter('time');
+    var durationFilter = $filter('duration');
     
     $scope.passed = 123456789;
-    $scope.passedPre = timeFilter($scope.passed, 'hh:mm:ss:sss');
+    $scope.passedPre = durationFilter($scope.passed, 'hh:mm:ss:sss');
   });
 ```
 

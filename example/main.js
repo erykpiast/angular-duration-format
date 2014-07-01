@@ -1,7 +1,7 @@
 angular
-    .module('angular-time-format-example', [
-        'angular-time-format.filter'
+    .module('angular-duration-format-example', [
+        'angular-duration-format.filter'
     ])
     .controller('exampleCtrl', function($scope) {
-        $scope.currentTime = 121313983298;
+        $scope.duration = 121313983298;
     });
