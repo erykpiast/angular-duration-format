@@ -125,6 +125,10 @@ angular
 
 
         return function(value, format) {
+            if (typeof value !== "number") {
+                return value;
+            }
+            
             var timestamp = parseInt(value.valueOf(), 10);
 
             if(isNaN(timestamp)) {
