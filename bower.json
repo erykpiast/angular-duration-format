@@ -6,7 +6,7 @@
     "Eryk Napierała <eryk.piast@gmail.com>"
   ],
   "description": "AngularJS filter for formatting duration",
-  "main": "src/main.module.js",
+  "main": "dist/angular-duration-format.js",
   "keywords": [
     "angular",
     "duration",
