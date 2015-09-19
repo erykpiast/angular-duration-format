@@ -8,7 +8,7 @@ Add `angular-duration-format` as your app dependency.
 
 ```
   angular.module('myModule', [
-    angular-duration-format'
+    'angular-duration-format'
   ]);
 ```
 
