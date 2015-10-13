@@ -1,4 +1,4 @@
 angular
 	.module('angular-duration-format', [
-		'angular-duration-format.filter'
+		'angular-duration-format.filter',
 	]);
