@@ -1,6 +1,6 @@
 {
   "name": "angular-duration-format",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "AngularJS utils for formatting time",
   "main": "gruntfile.js",
   "directories": {
